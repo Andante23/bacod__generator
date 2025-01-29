@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/bacod.css">
+
+</head>
+<body>
+      
+   <header>
+       <h1>
+          바코드 생성기
+       </h1>
+
+      
+   </header>
+    
+    <section>
+
+        <input type="text" maxlength="13" required id="bacodId" placeholder="스캔하려는 바코드 번호입력(13자리)" class="input__bacodId"> 
+
+        <div  class="bacod__container">
+           <img src="img/bacod2.png" alt="바코드"  class="bacod__img" >
+           <span id="bacodtag" ></span>
+        </div>
+       
+       
+    </section>
+        
+
+
+    <script>
+      let bacodId = document.getElementById("bacodId");
+      let bacodTag = document.getElementById("bacodtag");
+
+       bacodId.addEventListener("input",function(){
+        bacodTag.innerHTML = bacodId.value;
+       })
+    </script>
+
+
+
+</body>
+</html>
